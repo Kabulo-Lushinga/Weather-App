@@ -1,0 +1,120 @@
+body {
+    font-family: 'Roboto', sans-serif;
+    text-align: center;
+    margin: 20px;
+    background: url('sky.jpeg') no-repeat center center fixed;
+    background-size: cover;
+    position: relative;
+}
+
+body::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: -1;
+}
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+h1 {
+    margin: 30px;
+   }
+
+#app {
+    max-width: 400px;
+    margin: auto;  
+}
+
+input, button {
+    padding: 12px 20px;
+    margin: 15px auto;
+    width: 80%;
+    max-width: 400px;
+    height: auto;
+    font-size: 1rem;
+    border-radius: 8px;
+    border: none;
+    outline: none;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease;
+    display: block;
+}
+
+/* Input styling */
+input {
+    background-color: #f5f5f5;
+    color: #333;
+}
+
+/* Button styling */
+button {
+    background-color: #090909;
+    color: white;
+    cursor: pointer;
+    font-weight: 600;
+}
+
+/* Hover effect for button */
+button:hover {
+    transform: scale(1.02);
+    box-shadow: 0 6px 16px rgba(0, 0, 0, 0.2);
+}
+
+#weather-info {
+    margin-top: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+   
+}
+
+.weather-detail {
+    display: flex;
+    align-items: center;
+    margin: 5px 0;
+}
+
+.weather-detail i {
+    margin-right: 10px;
+    font-size: 1.2rem;
+    color: #000;
+}
+
+/* Weather Icon Styling */
+#weather-info i {
+    font-size: 1rem;        
+    color: #000000;           
+    transition: transform 0.3s ease, color 0.3s ease;
+}
+
+/* Hover effect for weather icons */
+#weather-info i:hover {
+    transform: scale(1.1);    
+    color: #000;           
+}
+
+/* Optional: Add a subtle drop shadow for a modern look */
+#weather-info i {
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+/* Additional icon-related utility classes */
+.icon-large {
+    font-size: 1rem;
+}
+
+.icon-small {
+    font-size: 1rem;
+}
